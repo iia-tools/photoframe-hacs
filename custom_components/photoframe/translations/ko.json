@@ -1,0 +1,92 @@
+{
+  "config": {
+    "abort": {
+      "already_configured": "이 스마트프레임은 이미 설정되어 있습니다.",
+      "reauth_successful": "스마트프레임 PIN을 갱신했습니다."
+    },
+    "error": {
+      "cannot_connect": "스마트프레임에 연결할 수 없습니다.",
+      "invalid_auth": "PIN이 맞지 않습니다.",
+      "invalid_url": "올바른 스마트프레임 주소를 입력해 주세요.",
+      "unknown": "예상하지 못한 오류가 발생했습니다."
+    },
+    "step": {
+      "reauth_confirm": {
+        "data": {
+          "pin": "PIN"
+        },
+        "description": "스마트프레임 원격 관리 화면에 표시된 현재 PIN을 입력해 주세요.",
+        "title": "스마트프레임 PIN 갱신"
+      },
+      "user": {
+        "data": {
+          "pin": "PIN",
+          "url": "스마트프레임 주소"
+        },
+        "description": "스마트프레임 원격 관리 화면에 표시된 주소와 PIN을 입력해 주세요.",
+        "title": "스마트프레임"
+      }
+    }
+  },
+  "entity": {
+    "button": {
+      "clear_cache": {
+        "name": "캐시 비우기"
+      },
+      "next": {
+        "name": "다음"
+      },
+      "previous": {
+        "name": "이전"
+      },
+      "screen_off_15m": {
+        "name": "화면 15분 끄기"
+      },
+      "screen_on": {
+        "name": "화면 켜기"
+      },
+      "start": {
+        "name": "슬라이드쇼 시작"
+      },
+      "sync": {
+        "name": "지금 동기화"
+      }
+    },
+    "number": {
+      "music_volume": {
+        "name": "음악 볼륨"
+      },
+      "system_volume": {
+        "name": "시스템 볼륨"
+      }
+    },
+    "sensor": {
+      "cache_size": {
+        "name": "캐시 용량"
+      },
+      "current_media": {
+        "name": "현재 미디어"
+      },
+      "music_count": {
+        "name": "음악 수"
+      },
+      "photo_count": {
+        "name": "사진 수"
+      },
+      "screen_off_remaining": {
+        "name": "화면 끄기 남은 시간"
+      },
+      "state": {
+        "name": "상태"
+      },
+      "video_count": {
+        "name": "영상 수"
+      }
+    },
+    "switch": {
+      "video_playback": {
+        "name": "영상 재생"
+      }
+    }
+  }
+}

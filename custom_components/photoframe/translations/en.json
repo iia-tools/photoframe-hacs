@@ -1,0 +1,92 @@
+{
+  "config": {
+    "abort": {
+      "already_configured": "This Smart Frame is already configured.",
+      "reauth_successful": "The Smart Frame PIN was updated."
+    },
+    "error": {
+      "cannot_connect": "Cannot connect to the Smart Frame.",
+      "invalid_auth": "The PIN was rejected.",
+      "invalid_url": "Enter a valid Smart Frame URL.",
+      "unknown": "Unexpected error."
+    },
+    "step": {
+      "reauth_confirm": {
+        "data": {
+          "pin": "PIN"
+        },
+        "description": "Enter the current PIN shown in the Smart Frame remote management screen.",
+        "title": "Update Smart Frame PIN"
+      },
+      "user": {
+        "data": {
+          "pin": "PIN",
+          "url": "Smart Frame URL"
+        },
+        "description": "Enter the address and PIN shown in the Smart Frame remote management screen.",
+        "title": "Smart Frame"
+      }
+    }
+  },
+  "entity": {
+    "button": {
+      "clear_cache": {
+        "name": "Clear cache"
+      },
+      "next": {
+        "name": "Next"
+      },
+      "previous": {
+        "name": "Previous"
+      },
+      "screen_off_15m": {
+        "name": "Screen off for 15 minutes"
+      },
+      "screen_on": {
+        "name": "Screen on"
+      },
+      "start": {
+        "name": "Start slideshow"
+      },
+      "sync": {
+        "name": "Sync now"
+      }
+    },
+    "number": {
+      "music_volume": {
+        "name": "Music volume"
+      },
+      "system_volume": {
+        "name": "System volume"
+      }
+    },
+    "sensor": {
+      "cache_size": {
+        "name": "Cache size"
+      },
+      "current_media": {
+        "name": "Current media"
+      },
+      "music_count": {
+        "name": "Music count"
+      },
+      "photo_count": {
+        "name": "Photo count"
+      },
+      "screen_off_remaining": {
+        "name": "Screen off remaining"
+      },
+      "state": {
+        "name": "Status"
+      },
+      "video_count": {
+        "name": "Video count"
+      }
+    },
+    "switch": {
+      "video_playback": {
+        "name": "Video playback"
+      }
+    }
+  }
+}
