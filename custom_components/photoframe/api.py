@@ -44,6 +44,10 @@ class SmartFrameApiClient:
         """Return the current Smart Frame status."""
         return await self._async_request("GET", "/api/status")
 
+    async def async_get_current_image(self) -> bytes | None:
+        """Return the currently displayed photo as JPEG bytes."""
+        return await self._async_bytes_request("GET", "/current", allow_not_found=True)
+
     async def async_action(self, action: str, **params: Any) -> dict[str, Any]:
         """Send an action command to the Smart Frame."""
         data = {"action": action}
@@ -95,3 +99,37 @@ class SmartFrameApiClient:
         if payload.get("ok") is False:
             raise SmartFrameError(str(payload.get("error") or "request failed"))
         return payload
+
+    async def _async_bytes_request(
+        self,
+        method: str,
+        path: str,
+        *,
+        allow_not_found: bool = False,
+        **kwargs: Any,
+    ) -> bytes | None:
+        """Send an API request that returns raw bytes."""
+        url = f"{self.base_url}{path}"
+        headers = kwargs.pop("headers", {})
+        headers["X-PhotoFrame-Pin"] = self._pin
+
+        try:
+            async with self._session.request(
+                method,
+                url,
+                headers=headers,
+                timeout=self._timeout,
+                **kwargs,
+            ) as response:
+                if allow_not_found and response.status == 404:
+                    return None
+                if response.status == 401:
+                    raise SmartFrameAuthError("invalid PIN")
+                if response.status == 429:
+                    raise SmartFrameRateLimited("too many failed PIN attempts")
+                if response.status >= 400:
+                    body = await response.text()
+                    raise SmartFrameError(f"HTTP {response.status}: {body}")
+                return await response.read()
+        except (asyncio.TimeoutError, ClientError) as err:
+            raise SmartFrameCannotConnect(str(err)) from err

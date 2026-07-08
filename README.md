@@ -18,6 +18,8 @@ Assistant integration files and does not include the Android app source.
 7. Restart Home Assistant.
 8. Go to `Settings` > `Devices & services` > `Add integration`.
 9. Search for `Smart Frame` and enter the frame URL and PIN.
+10. Add the `Current photo` camera entity to a Picture Entity card to show the
+    photo currently displayed on the frame.
 
 ## Entities
 
@@ -25,9 +27,10 @@ The integration creates one Smart Frame device with these entities:
 
 | Type | Entities |
 | --- | --- |
+| Camera | Current photo |
 | Sensor | Status, photo count, video count, music count, cache size, screen off remaining, current media |
-| Button | Start slideshow, previous, next, sync now, screen off for 15 minutes, screen on, clear cache |
-| Number | Music volume, system volume |
+| Button | Start slideshow, previous, next, sync now, screen off for 15 minutes, screen off until turned on, screen on, open Wi-Fi settings, open brightness permission, clear cache |
+| Number | Music volume, system volume, screen brightness |
 | Switch | Video playback |
 
 ## Notes

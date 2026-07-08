@@ -29,6 +29,11 @@
     }
   },
   "entity": {
+    "camera": {
+      "current_photo": {
+        "name": "Current photo"
+      }
+    },
     "button": {
       "clear_cache": {
         "name": "Clear cache"
@@ -42,6 +47,9 @@
       "screen_off_15m": {
         "name": "Screen off for 15 minutes"
       },
+      "screen_off_until_on": {
+        "name": "Screen off until turned on"
+      },
       "screen_on": {
         "name": "Screen on"
       },
@@ -50,11 +58,20 @@
       },
       "sync": {
         "name": "Sync now"
+      },
+      "wifi_settings": {
+        "name": "Open Wi-Fi settings"
+      },
+      "brightness_settings": {
+        "name": "Open brightness permission"
       }
     },
     "number": {
       "music_volume": {
         "name": "Music volume"
+      },
+      "screen_brightness": {
+        "name": "Screen brightness"
       },
       "system_volume": {
         "name": "System volume"

@@ -54,6 +54,9 @@ def _state_attributes(data: dict[str, Any]) -> Mapping[str, Any]:
         "state_text",
         "screen_blackout",
         "temporary_screen_off",
+        "screen_off_until_on",
+        "screen_brightness",
+        "screen_brightness_system_writable",
         "storage_summary",
         "remote_port",
     )

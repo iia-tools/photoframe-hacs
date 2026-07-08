@@ -53,10 +53,29 @@ BUTTONS: tuple[SmartFrameButtonEntityDescription, ...] = (
         params={"minutes": 15},
     ),
     SmartFrameButtonEntityDescription(
+        key="screen_off_until_on",
+        translation_key="screen_off_until_on",
+        icon="mdi:monitor-off",
+        action="screen_off",
+        params={"seconds": 0},
+    ),
+    SmartFrameButtonEntityDescription(
         key="screen_on",
         translation_key="screen_on",
         icon="mdi:monitor",
         action="screen_on",
+    ),
+    SmartFrameButtonEntityDescription(
+        key="wifi_settings",
+        translation_key="wifi_settings",
+        icon="mdi:wifi-cog",
+        action="wifi_settings",
+    ),
+    SmartFrameButtonEntityDescription(
+        key="brightness_settings",
+        translation_key="brightness_settings",
+        icon="mdi:brightness-6",
+        action="brightness_settings",
     ),
     SmartFrameButtonEntityDescription(
         key="clear_cache",

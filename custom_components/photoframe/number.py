@@ -19,6 +19,7 @@ class SmartFrameNumberEntityDescription(NumberEntityDescription):
 
     status_key: str
     action: str
+    value_param: str
 
 
 NUMBERS: tuple[SmartFrameNumberEntityDescription, ...] = (
@@ -33,6 +34,7 @@ NUMBERS: tuple[SmartFrameNumberEntityDescription, ...] = (
         mode=NumberMode.SLIDER,
         status_key="music_volume",
         action="set_music_volume",
+        value_param="volume",
     ),
     SmartFrameNumberEntityDescription(
         key="system_volume",
@@ -45,6 +47,20 @@ NUMBERS: tuple[SmartFrameNumberEntityDescription, ...] = (
         mode=NumberMode.SLIDER,
         status_key="system_volume",
         action="set_system_volume",
+        value_param="volume",
+    ),
+    SmartFrameNumberEntityDescription(
+        key="screen_brightness",
+        translation_key="screen_brightness",
+        icon="mdi:brightness-6",
+        native_min_value=1,
+        native_max_value=100,
+        native_step=1,
+        native_unit_of_measurement=PERCENTAGE,
+        mode=NumberMode.SLIDER,
+        status_key="screen_brightness",
+        action="set_screen_brightness",
+        value_param="brightness",
     ),
 )
 
@@ -79,4 +95,7 @@ class SmartFrameNumber(SmartFrameEntity, NumberEntity):
 
     async def async_set_native_value(self, value: float) -> None:
         """Set the number value."""
-        await self.async_send_action(self.entity_description.action, volume=int(value))
+        await self.async_send_action(
+            self.entity_description.action,
+            **{self.entity_description.value_param: int(value)},
+        )

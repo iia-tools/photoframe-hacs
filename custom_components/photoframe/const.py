@@ -10,4 +10,10 @@ CONF_PIN = "pin"
 
 DEFAULT_SCAN_INTERVAL = timedelta(seconds=15)
 
-PLATFORMS = [Platform.BUTTON, Platform.NUMBER, Platform.SENSOR, Platform.SWITCH]
+PLATFORMS = [
+    Platform.BUTTON,
+    Platform.CAMERA,
+    Platform.NUMBER,
+    Platform.SENSOR,
+    Platform.SWITCH,
+]

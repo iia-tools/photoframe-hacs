@@ -29,6 +29,11 @@
     }
   },
   "entity": {
+    "camera": {
+      "current_photo": {
+        "name": "현재 사진"
+      }
+    },
     "button": {
       "clear_cache": {
         "name": "캐시 비우기"
@@ -42,6 +47,9 @@
       "screen_off_15m": {
         "name": "화면 15분 끄기"
       },
+      "screen_off_until_on": {
+        "name": "화면 계속 끄기"
+      },
       "screen_on": {
         "name": "화면 켜기"
       },
@@ -50,11 +58,20 @@
       },
       "sync": {
         "name": "지금 동기화"
+      },
+      "wifi_settings": {
+        "name": "Wi-Fi 설정 열기"
+      },
+      "brightness_settings": {
+        "name": "밝기 권한 열기"
       }
     },
     "number": {
       "music_volume": {
         "name": "음악 볼륨"
+      },
+      "screen_brightness": {
+        "name": "화면 밝기"
       },
       "system_volume": {
         "name": "시스템 볼륨"
