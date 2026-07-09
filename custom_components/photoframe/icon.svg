@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-label="PhotoFrame">
+  <rect width="256" height="256" rx="44" fill="#f5f6fa"/>
+  <rect x="54" y="44" width="156" height="114" rx="18" fill="#ddebff"/>
+  <rect x="42" y="62" width="172" height="134" rx="22" fill="#ffffff"/>
+  <rect x="61" y="82" width="134" height="92" rx="10" fill="#1d1d1f" opacity=".92"/>
+  <path d="M72 97h112v50l-33-27c-6-5-15-4-20 2l-23 25-20-16c-5-4-13-4-18 1l-18 18V97Z" fill="#eef6ff"/>
+  <circle cx="161" cy="108" r="17" fill="#ffd166"/>
+  <path d="m72 154 29-29 29 22 36-36 18 15v38H72Z" fill="#5ac8fa"/>
+  <path d="m72 163 29-25 26 19 27-22 30 24v15H72Z" fill="#34c759"/>
+</svg>

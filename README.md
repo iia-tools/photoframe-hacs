@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="icon.svg" alt="Smart Frame" width="96" height="96">
+</p>
+
 # Smart Frame for Home Assistant
 
 Home Assistant custom integration for the PhotoFrame Android smart frame app.

@@ -20,9 +20,51 @@ class SmartFrameNumberEntityDescription(NumberEntityDescription):
     status_key: str
     action: str
     value_param: str
+    integer_value: bool = True
 
 
 NUMBERS: tuple[SmartFrameNumberEntityDescription, ...] = (
+    SmartFrameNumberEntityDescription(
+        key="display_seconds",
+        translation_key="display_seconds",
+        icon="mdi:timer-outline",
+        native_min_value=3,
+        native_max_value=3600,
+        native_step=1,
+        native_unit_of_measurement="s",
+        mode=NumberMode.BOX,
+        status_key="display_seconds",
+        action="set_display_seconds",
+        value_param="seconds",
+    ),
+    SmartFrameNumberEntityDescription(
+        key="transition_duration_seconds",
+        translation_key="transition_duration_seconds",
+        icon="mdi:transition",
+        native_min_value=0.1,
+        native_max_value=10,
+        native_step=0.1,
+        native_unit_of_measurement="s",
+        mode=NumberMode.BOX,
+        status_key="transition_duration_seconds",
+        action="set_transition_duration",
+        value_param="seconds",
+        integer_value=False,
+    ),
+    SmartFrameNumberEntityDescription(
+        key="display_effect_duration_seconds",
+        translation_key="display_effect_duration_seconds",
+        icon="mdi:image-filter-center-focus",
+        native_min_value=0.5,
+        native_max_value=60,
+        native_step=0.1,
+        native_unit_of_measurement="s",
+        mode=NumberMode.BOX,
+        status_key="display_effect_duration_seconds",
+        action="set_display_effect_duration",
+        value_param="seconds",
+        integer_value=False,
+    ),
     SmartFrameNumberEntityDescription(
         key="music_volume",
         translation_key="music_volume",
@@ -95,7 +137,8 @@ class SmartFrameNumber(SmartFrameEntity, NumberEntity):
 
     async def async_set_native_value(self, value: float) -> None:
         """Set the number value."""
+        payload_value = int(value) if self.entity_description.integer_value else round(float(value), 1)
         await self.async_send_action(
             self.entity_description.action,
-            **{self.entity_description.value_param: int(value)},
+            **{self.entity_description.value_param: payload_value},
         )
