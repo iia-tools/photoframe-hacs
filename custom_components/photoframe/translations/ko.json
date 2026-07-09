@@ -62,11 +62,68 @@
       "wifi_settings": {
         "name": "Wi-Fi 설정 열기"
       },
+      "wifi_on": {
+        "name": "Wi-Fi 켜기"
+      },
+      "wifi_off": {
+        "name": "Wi-Fi 끄기"
+      },
+      "bluetooth_settings": {
+        "name": "블루투스 설정 열기"
+      },
+      "bluetooth_on": {
+        "name": "블루투스 켜기"
+      },
+      "bluetooth_off": {
+        "name": "블루투스 끄기"
+      },
       "brightness_settings": {
         "name": "밝기 권한 열기"
+      },
+      "auto_rotate_on": {
+        "name": "자동 회전 켜기"
+      },
+      "auto_rotate_off": {
+        "name": "자동 회전 끄기"
+      },
+      "rotate_0": {
+        "name": "0도 고정"
+      },
+      "rotate_90": {
+        "name": "90도 고정"
+      },
+      "rotate_180": {
+        "name": "180도 고정"
+      },
+      "rotate_270": {
+        "name": "270도 고정"
+      },
+      "accessibility_settings": {
+        "name": "원격 조작 권한 열기"
+      },
+      "return_app": {
+        "name": "PhotoFrame으로 돌아가기"
+      },
+      "mute": {
+        "name": "음소거"
+      },
+      "unmute": {
+        "name": "음소거 해제"
+      },
+      "global_back": {
+        "name": "뒤로"
+      },
+      "global_home": {
+        "name": "홈"
       }
     },
     "number": {
+      "display_effect_duration_seconds": {
+        "name": "표시 애니메이션 시간"
+      },
+      "display_seconds": {
+        "name": "사진 표시 시간"
+      },
       "music_volume": {
         "name": "음악 볼륨"
       },
@@ -75,6 +132,9 @@
       },
       "system_volume": {
         "name": "시스템 볼륨"
+      },
+      "transition_duration_seconds": {
+        "name": "전환 시간"
       }
     },
     "sensor": {
@@ -101,6 +161,30 @@
       }
     },
     "switch": {
+      "background_music": {
+        "name": "배경음악"
+      },
+      "motion_photo_playback": {
+        "name": "모션포토 재생"
+      },
+      "screen_auto_brightness": {
+        "name": "자동 밝기"
+      },
+      "screen_auto_rotate": {
+        "name": "자동 회전"
+      },
+      "wifi": {
+        "name": "Wi-Fi"
+      },
+      "bluetooth": {
+        "name": "블루투스"
+      },
+      "system_mute": {
+        "name": "음소거"
+      },
+      "shuffle": {
+        "name": "무작위 재생"
+      },
       "video_playback": {
         "name": "영상 재생"
       }

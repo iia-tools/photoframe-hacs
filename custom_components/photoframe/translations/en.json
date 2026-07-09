@@ -62,11 +62,68 @@
       "wifi_settings": {
         "name": "Open Wi-Fi settings"
       },
+      "wifi_on": {
+        "name": "Turn Wi-Fi on"
+      },
+      "wifi_off": {
+        "name": "Turn Wi-Fi off"
+      },
+      "bluetooth_settings": {
+        "name": "Open Bluetooth settings"
+      },
+      "bluetooth_on": {
+        "name": "Turn Bluetooth on"
+      },
+      "bluetooth_off": {
+        "name": "Turn Bluetooth off"
+      },
       "brightness_settings": {
         "name": "Open brightness permission"
+      },
+      "auto_rotate_on": {
+        "name": "Turn auto-rotate on"
+      },
+      "auto_rotate_off": {
+        "name": "Turn auto-rotate off"
+      },
+      "rotate_0": {
+        "name": "Lock 0 degrees"
+      },
+      "rotate_90": {
+        "name": "Lock 90 degrees"
+      },
+      "rotate_180": {
+        "name": "Lock 180 degrees"
+      },
+      "rotate_270": {
+        "name": "Lock 270 degrees"
+      },
+      "accessibility_settings": {
+        "name": "Open remote control permission"
+      },
+      "return_app": {
+        "name": "Return to PhotoFrame"
+      },
+      "mute": {
+        "name": "Mute"
+      },
+      "unmute": {
+        "name": "Unmute"
+      },
+      "global_back": {
+        "name": "Back"
+      },
+      "global_home": {
+        "name": "Home"
       }
     },
     "number": {
+      "display_effect_duration_seconds": {
+        "name": "Display animation duration"
+      },
+      "display_seconds": {
+        "name": "Photo display duration"
+      },
       "music_volume": {
         "name": "Music volume"
       },
@@ -75,6 +132,9 @@
       },
       "system_volume": {
         "name": "System volume"
+      },
+      "transition_duration_seconds": {
+        "name": "Transition duration"
       }
     },
     "sensor": {
@@ -101,6 +161,30 @@
       }
     },
     "switch": {
+      "background_music": {
+        "name": "Background music"
+      },
+      "motion_photo_playback": {
+        "name": "Motion Photo playback"
+      },
+      "screen_auto_brightness": {
+        "name": "Auto brightness"
+      },
+      "screen_auto_rotate": {
+        "name": "Auto rotate"
+      },
+      "wifi": {
+        "name": "Wi-Fi"
+      },
+      "bluetooth": {
+        "name": "Bluetooth"
+      },
+      "system_mute": {
+        "name": "Mute"
+      },
+      "shuffle": {
+        "name": "Shuffle playback"
+      },
       "video_playback": {
         "name": "Video playback"
       }

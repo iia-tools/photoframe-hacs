@@ -29,9 +29,13 @@ The integration creates one Smart Frame device with these entities:
 | --- | --- |
 | Camera | Current photo |
 | Sensor | Status, photo count, video count, music count, cache size, screen off remaining, current media |
-| Button | Start slideshow, previous, next, sync now, screen off for 15 minutes, screen off until turned on, screen on, open Wi-Fi settings, open brightness permission, clear cache |
-| Number | Music volume, system volume, screen brightness |
-| Switch | Video playback |
+| Button | Start slideshow, previous, next, sync now, screen off for 15 minutes, screen off until turned on, screen on, open Wi-Fi/Bluetooth/brightness/remote-control settings, rotate 0/90/180/270, return to app, back/home, clear cache |
+| Number | Photo display duration, transition duration, display animation duration, music volume, system volume, screen brightness |
+| Switch | Video playback, Motion Photo playback, background music, shuffle playback, auto brightness, auto rotate, Wi-Fi, Bluetooth, mute |
+
+Prefer switch entities for on/off features such as Wi-Fi, Bluetooth, auto
+rotate, and mute. Volume and brightness are exposed as number entities with
+slider support in Home Assistant.
 
 ## Notes
 
