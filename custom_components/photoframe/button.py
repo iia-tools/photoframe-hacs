@@ -46,6 +46,18 @@ BUTTONS: tuple[SmartFrameButtonEntityDescription, ...] = (
         action="sync",
     ),
     SmartFrameButtonEntityDescription(
+        key="refresh_weather",
+        translation_key="refresh_weather",
+        icon="mdi:weather-partly-cloudy",
+        action="refresh_weather",
+    ),
+    SmartFrameButtonEntityDescription(
+        key="refresh_location",
+        translation_key="refresh_location",
+        icon="mdi:crosshairs-gps",
+        action="refresh_location",
+    ),
+    SmartFrameButtonEntityDescription(
         key="screen_off_15m",
         translation_key="screen_off_15m",
         icon="mdi:monitor-off",

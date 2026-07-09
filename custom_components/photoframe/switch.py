@@ -84,6 +84,13 @@ SWITCHES: tuple[SmartFrameSwitchEntityDescription, ...] = (
         action="set_screen_auto_brightness",
     ),
     SmartFrameSwitchEntityDescription(
+        key="night_mute",
+        translation_key="night_mute",
+        icon="mdi:volume-mute",
+        status_key="night_mute_enabled",
+        action="set_night_mute",
+    ),
+    SmartFrameSwitchEntityDescription(
         key="screen_auto_rotate",
         translation_key="screen_auto_rotate",
         icon="mdi:screen-rotation",

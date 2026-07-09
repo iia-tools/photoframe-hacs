@@ -63,13 +63,25 @@ def _state_attributes(data: dict[str, Any]) -> Mapping[str, Any]:
         "screen_auto_rotate",
         "screen_rotation",
         "screen_rotation_degrees",
+        "schedule_enabled",
+        "play_start",
+        "play_end",
+        "schedule_days",
+        "night_black_enabled",
+        "night_start",
+        "night_end",
+        "power_save_mode",
         "wifi_state",
         "bluetooth_state",
         "system_muted",
         "accessibility_control",
         "playback_folder",
+        "playback_folders",
         "recent_input_events",
         "storage_summary",
+        "sync_health_state",
+        "sync_health_summary",
+        "last_sync_at",
         "remote_port",
     )
     return {key: data[key] for key in keys if key in data}
@@ -81,6 +93,12 @@ def _current_attributes(data: dict[str, Any]) -> Mapping[str, Any] | None:
     if not isinstance(current, dict):
         return None
     return {key: value for key, value in current.items() if key != "file_name"}
+
+
+def _sync_health_attributes(data: dict[str, Any]) -> Mapping[str, Any]:
+    """Return persisted sync health details."""
+    keys = ("sync_health_state", "last_sync_at")
+    return {key: data[key] for key in keys if key in data}
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -124,6 +142,13 @@ SENSORS: tuple[SmartFrameSensorEntityDescription, ...] = (
         native_unit_of_measurement=UnitOfInformation.MEGABYTES,
         state_class=SensorStateClass.MEASUREMENT,
         value_fn=_cache_mb,
+    ),
+    SmartFrameSensorEntityDescription(
+        key="sync_health",
+        translation_key="sync_health",
+        icon="mdi:cloud-sync-outline",
+        value_fn=lambda data: _value(data, "sync_health_summary"),
+        attributes_fn=_sync_health_attributes,
     ),
     SmartFrameSensorEntityDescription(
         key="screen_off_remaining",

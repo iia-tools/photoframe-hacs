@@ -59,6 +59,12 @@
       "sync": {
         "name": "Sync now"
       },
+      "refresh_weather": {
+        "name": "Refresh current weather"
+      },
+      "refresh_location": {
+        "name": "Get current location"
+      },
       "wifi_settings": {
         "name": "Open Wi-Fi settings"
       },
@@ -153,6 +159,9 @@
       "screen_off_remaining": {
         "name": "Screen off remaining"
       },
+      "sync_health": {
+        "name": "Latest sync"
+      },
       "state": {
         "name": "Status"
       },
@@ -169,6 +178,9 @@
       },
       "screen_auto_brightness": {
         "name": "Auto brightness"
+      },
+      "night_mute": {
+        "name": "Mute while screen is off"
       },
       "screen_auto_rotate": {
         "name": "Auto rotate"

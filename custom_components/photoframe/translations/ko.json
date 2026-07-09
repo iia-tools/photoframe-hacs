@@ -59,6 +59,12 @@
       "sync": {
         "name": "지금 동기화"
       },
+      "refresh_weather": {
+        "name": "현재 날씨 갱신"
+      },
+      "refresh_location": {
+        "name": "현재 위치 가져오기"
+      },
       "wifi_settings": {
         "name": "Wi-Fi 설정 열기"
       },
@@ -153,6 +159,9 @@
       "screen_off_remaining": {
         "name": "화면 끄기 남은 시간"
       },
+      "sync_health": {
+        "name": "최근 동기화"
+      },
       "state": {
         "name": "상태"
       },
@@ -169,6 +178,9 @@
       },
       "screen_auto_brightness": {
         "name": "자동 밝기"
+      },
+      "night_mute": {
+        "name": "야간/화면 꺼짐 중 음소거"
       },
       "screen_auto_rotate": {
         "name": "자동 회전"
